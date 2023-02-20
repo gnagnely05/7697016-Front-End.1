@@ -11,6 +11,11 @@ const prixElement = document.createElement("p");
 prixElement.innerText = `Prix: ${article.prix} € (${article.prix < 35 ? "€" : "€€€"})`;
 const categorieElement = document.createElement("p");
 categorieElement.innerText = article.categorie ?? "(aucune catégorie)";
+//creation des elements de l'exercice
+const descriptionElement = document.createElement ("p");
+descriptionElement.innerText = article.description ?? "pas de description pour le moment";
+const stockElement = document.creatElement("p");
+stockElement.innerText =  article.disponibilité ? "En stock" : "Rupture de stock";
 //Rattachement de nos balises au DOM
 const sectionFiches = document.querySelector(".fiches");
 sectionFiches.appendChild(imageElement);
